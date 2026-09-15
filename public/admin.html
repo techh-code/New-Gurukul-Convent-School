@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Portal | New Gurukul Convent School</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <a class="back-home" href="/">← Back to school website</a>
+      <section class="login-card" id="loginView">
+        <img
+          src="assets/school-logo.png"
+          alt="New Gurukul Convent School logo"
+        />
+        <p class="eyebrow">Staff access</p>
+        <h1>Admin portal</h1>
+        <p>Sign in to view parent enquiries submitted through the website.</p>
+        <form id="loginForm">
+          <label
+            >Admin password<input
+              id="password"
+              type="password"
+              required
+              autocomplete="current-password"
+              placeholder="Enter password" /></label
+          ><button class="button gold" type="submit">
+            Sign in <span>→</span>
+          </button>
+          <p class="form-status" role="status"></p>
+        </form>
+        <small>For website administrators only.</small>
+      </section>
+      <section class="dashboard" id="dashboard" hidden>
+        <header class="admin-header">
+          <div>
+            <p class="eyebrow">New Gurukul Convent School</p>
+            <h1>Enquiries dashboard</h1>
+          </div>
+          <div>
+            <a class="button ghost-blue" href="/">View site</a
+            ><button id="logout" class="button outline">Sign out</button>
+          </div>
+        </header>
+        <div class="dashboard-summary">
+          <article><span>Total enquiries</span><b id="count">0</b></article>
+          <article>
+            <span>Latest submissions</span><b>Parent contact</b>
+          </article>
+        </div>
+        <div class="table-wrap">
+          <div class="table-head">
+            <h2>Parent enquiries</h2>
+            <button id="refresh" class="button outline">Refresh</button>
+          </div>
+          <p id="empty" class="empty" hidden>
+            No enquiries have been received yet.
+          </p>
+          <table id="enquiryTable">
+            <thead>
+              <tr>
+                <th>Received</th>
+                <th>Parent</th>
+                <th>Contact</th>
+                <th>Message</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

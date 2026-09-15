@@ -1,0 +1,7 @@
+{
+  "name": "new-gurukul-convent-school",
+  "version": "1.0.0",
+  "private": true,
+  "description": "School showcase website with enquiry API",
+  "scripts": { "start": "node server.js" }
+}
